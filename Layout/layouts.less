@@ -1,0 +1,79 @@
+.layout-container {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  min-height: 100%;
+  position: absolute;
+  bottom: 0;
+  min-height: 100%;
+  min-width: 100%;
+  top: 0;
+  left: 0;
+  overflow: inherit;
+  clip: rect(0, auto, auto, 0);
+}
+
+.flex-container-row {
+  position: absolute;
+  display: -webkit-inline-flex; /* Safari */
+  display: inline-flex;
+  -webkit-flex-direction: row; /* Safari */
+  flex-direction:         row;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.flex-container-col {
+  display: -webkit-flex; /* Safari */
+  display: flex;
+  -webkit-flex-direction: column; /* Safari */
+  flex-direction:         column;
+  min-height: 100%;
+  height: 100%;
+}
+
+.flex-row {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  flex-grow: 0;
+  -webkit-flex-grow: 0;
+  -webkit-flex: 100%;
+}
+
+.flex-col {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-width: 100%;
+  flex-grow: 0;
+  flex: 100%;
+  -webkit-flex-grow: 0;
+  -webkit-flex: 100%;
+}
+
+.splitter {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #363844;
+  cursor: default;
+  &.col:hover {
+    background-color: red;
+    cursor: col-resize;
+  }
+  &.row:hover {
+    background-color: red;
+    cursor: row-resize;
+  }
+}
